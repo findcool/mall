@@ -1,0 +1,8 @@
+
+[
+squid:S106*"9Replace this use of System.out or System.err by a logger.(êØé˜úÿÿÿÿ8íï÷üÈ-
+[
+squid:S106-"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ8“±óüÈ-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(‚ù­›úÿÿÿÿ8Å¨±ƒÈ-
+lsquid:UselessImportCheck"<Remove this unused import 'org.redisson.client.RedisClient'.(Şïº€ûÿÿÿÿ8§®íüÈ-

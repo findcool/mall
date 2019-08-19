@@ -1,0 +1,32 @@
+
+
+server:
+  port: 9001
+
+spring:
+  application:
+    name: credit-service
+
+eureka:
+  instance:
+    hostname: localhost
+    metadata-map:
+      version: current
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka
+#    registryFetchIntervalSeconds: 1
+#    leaseRenewalIntervalInSeconds: 1
+
+ribbon:
+  eager-load:
+    enabled: true
+  ConnectTimeout: 1000
+  ReadTimeout: 1000
+  OkToRetryOnAllOperations: true
+  MaxAutoRetries: 1
+  MaxAutoRetriesNextServer: 1
+
+feign:
+  hystrix:
+    enabled: false

@@ -1,0 +1,46 @@
+
+server:
+  port: 80
+
+spring:
+  application:
+    name: zuul-gateway
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/test?autoReconnect=true&useUnicode=true&characterEncoding=utf-8
+#    username: root
+#    password: root
+#    driver-class-name: com.mysql.jdbc.Driver
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+#    registryFetchIntervalSeconds: 3
+#    leaseRenewalIntervalInSeconds: 3
+
+zuul:
+  retryable: true
+  routes:
+    eureka:
+      path: /eureka/**
+      serviceId: eureka-server
+
+
+ribbon:
+  eager-load:
+    enabled: true
+  ConnectTimeout: 1000
+  ReadTimeout: 1000
+#  OkToRetryOnAllOperations: true
+#  MaxAutoRetries: 1
+#  MaxAutoRetriesNextServer: 1
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000

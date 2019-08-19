@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: eureka-server
+
+eureka:
+  instance:
+    hostname: localhost
+#    leaseExpirationDurationInSeconds: 4
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+  server:
+    enableSelfPreservation: false
+#    responseCacheUpdateIntervalMs: 1000
+#    evictionIntervalTimerInMs: 2000
